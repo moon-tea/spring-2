@@ -19,4 +19,14 @@ public class BearService implements IBearService {
 
         return bears;
     }
+
+    public Boolean createBear(Bear bear){
+        try{
+            repository.save(bear);
+            return true;
+        }
+        catch(Exception e){
+            return false;
+        }
+    }
 }
